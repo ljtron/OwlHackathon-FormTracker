@@ -1,1 +1,6 @@
-#Project
+# Project
+
+## packages
+- tensorflow
+- opencv-python
+- PyQt5
