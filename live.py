@@ -76,11 +76,14 @@ while success:
         [y * keypoints[0][0][11][0], x * keypoints[0][0][11][1]]
     )
 
-    #print("right leg angle: " + str(rightLegAngle))
-    #print("left leg angle: " + str(leftLegAngle))
+    # if(      (keypoints[0][0][16][2] >=.5 or keypoints[0][0][15][2] >=.5) and 
+    #       (keypoints[0][0][14][2] >=.5 or keypoints[0][0][13][2] >= .5) and
+    #       (keypoints[0][0][12][2] >=.5 or keypoints[0][0][11][2] >= .5)):
+    #     print("right leg angle: " + str(rightLegAngle))
+    #     print("left leg angle: " + str(leftLegAngle))
     if(
-        ((rightLegAngle <= 90 or rightLegAngle >84) or 
-         (leftLegAngle <= 90 or rightLegAngle >84)) and 
+        ((rightLegAngle <= 90 and rightLegAngle >84) or 
+         (leftLegAngle <= 90 and rightLegAngle >84)) and 
          (keypoints[0][0][16][2] >=.5 or keypoints[0][0][15][2] >=.5) and 
          (keypoints[0][0][14][2] >=.5 or keypoints[0][0][13][2] >= .5) and
          (keypoints[0][0][12][2] >=.5 or keypoints[0][0][11][2] >= .5)):
